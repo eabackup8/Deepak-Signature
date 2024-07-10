@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Animated Heart Shaped D</title>
+    <style>
+        body {
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+            background-color: #000;
+            margin: 0;
+        }
+
+        .letter-d {
+            width: 50vmin;
+            height: 50vmin;
+        }
+
+        .cls-1 {
+            fill: none;
+            stroke: #fff;
+            stroke-width: 5px;
+            stroke-linecap: round;
+            stroke-dasharray: 1500;
+            animation: draw 4s infinite;
+        }
+
+        @keyframes draw {
+            0% {
+                stroke-dashoffset: 1500;
+            }
+            100% {
+                stroke-dashoffset: 0;
+            }
+        }
+
+        .signature {
+            font-size: 2rem;
+            font-family: 'Courier New', Courier, monospace;
+            margin-top: 1rem;
+            background: linear-gradient(90deg, rgba(246, 9, 149, 1) 0%, rgba(254, 219, 59, 1) 33%, rgba(49, 191, 186, 1) 66%, rgba(255, 0, 0, 1) 100%);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            animation: gradient 5s infinite;
+        }
+
+        @keyframes gradient {
+            0% {
+                background-position: 0% 50%;
+            }
+            50% {
+                background-position: 100% 50%;
+            }
+            100% {
+                background-position: 0% 50%;
+            }
+        }
+    </style>
+</head>
+
+<body>
+    <svg class="letter-d" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 200 200">
+        <path class="cls-1" d="M100,30 Q130,10 150,30 Q170,50 150,70 L100,120 L50,70 Q30,50 50,30 Q70,10 100,30 Z" />
+    </svg>
+    <div class="signature">created by Deepak Bansode</div>
+</body>
+
+</html>
